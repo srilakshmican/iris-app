@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd 
-from sklearn import datasets
 
 #st.write("""# Iris Flower Prediction App""" )
 st.title('Iris Classification App')
@@ -39,14 +38,19 @@ pic0 = pic_file0.read()
 pic_file2 = open('images/iris2.jpg','rb')
 pic2 = pic_file2.read()
 
-
-
 pic_list = [pic0,pic,pic2]
 
-# Import model
-import joblib
-model = joblib.load('iris_model')
+#model building/ construction
+from sklearn import datasets
+from sklearn.ensemble import RandomForestClassifier
 
+iris = datasets.load_iris()
+
+x = iris.data
+y = iris.target 
+
+model = RandomForestClassifier()
+model.fit(x,y)
 pred = model.predict(df)
 pred_proba = model.predict_proba(df)
 
