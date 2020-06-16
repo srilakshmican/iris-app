@@ -30,14 +30,16 @@ st.subheader('User Input')
 st.write(df)
 
 #Images
-pic_file = open('https://github.com/srilakshmican/iris-app/raw/master/images/iris1.jpg','rb')
+pic_file = open('images/iris1.jpg','rb')
 pic = pic_file.read()
 
-pic_file0 = open('https://github.com/srilakshmican/iris-app/raw/master/images/iris0.jpeg','rb')
+pic_file0 = open('images/iris0.jpeg','rb')
 pic0 = pic_file0.read()
 
-pic_file2 = open('https://github.com/srilakshmican/iris-app/raw/master/images/iris2.jpg','rb')
+pic_file2 = open('images/iris2.jpg','rb')
 pic2 = pic_file2.read()
+
+
 
 pic_list = [pic0,pic,pic2]
 
